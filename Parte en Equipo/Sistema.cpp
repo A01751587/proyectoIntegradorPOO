@@ -114,7 +114,7 @@ TicketL generarTicketL(Cliente cliente){ // Jorge Isidro Blanco Martinez
 
 PaqueteL generarPaqueteL(Cliente cliente){//Paulo Ogando Gulias
     PaqueteL paquete = PaqueteL{};
-    paquete.tamaño();
+    paquete.tamanio();
     paquete.crearPaquete(cliente.getLocal());
     paquete.datosCliente(cliente);
     cout << paquete.enviarPaquete(cliente) << endl;
@@ -133,7 +133,7 @@ TicketI generarTicketI(Cliente cliente){ // Jorge Isidro Blanco Martinez
 
 PaqueteI generarPaqueteI(Cliente cliente){//Paulo Ogando Gulias
     PaqueteI paquete = PaqueteI{};
-    paquete.tamaño();
+    paquete.tamanio();
     paquete.crearPaquete(cliente.getInternacional());
     paquete.datosCliente(cliente);
     cout << paquete.enviarPaquete(cliente) << endl;

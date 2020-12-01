@@ -65,7 +65,7 @@ class Cliente{
         }
 
         bool validarTarjeta(){
-            if(tarjeta.getAño() < 2020){
+            if(tarjeta.getAnio() < 2020){
                 return false;
             } else {
                 return true;

@@ -16,7 +16,7 @@ class PaqueteI{
     PaqueteI(){
         tamanioPaquete = " ";
     }
-    void tamaño(){
+    void tamanio(){
         srand(time(NULL));
         int tam = 1 + rand() % (4 - 1);
         if (tam == 1){

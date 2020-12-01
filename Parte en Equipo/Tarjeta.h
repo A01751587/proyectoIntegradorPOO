@@ -44,7 +44,7 @@ class Tarjeta{
             cout << "Saldo de la Tarjeta: " << to_string(saldoTar) << endl;
         }
 
-        int getAño(){return anioVencimientoTarjeta;}
+        int getAnio(){return anioVencimientoTarjeta;}
         
         string eliminarTarjeta(){
             return "La Tarjeta ha sido eliminada del sistema por su seguridad";
