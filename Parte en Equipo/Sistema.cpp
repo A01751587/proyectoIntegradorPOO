@@ -17,7 +17,7 @@ using namespace std;
 Cliente registro(){
     string nom, domicilio, correo, cdatos {"n"};
     Cliente cliente = Cliente{};
-    int año;
+    int anio;
     cout << "\t" << endl;
     cout << "Bienvenido a Ekko, el mejor sistema de ventas!" << endl;
     cout << "\t" << endl;
@@ -29,8 +29,8 @@ Cliente registro(){
         cout << cliente.ingresarPlataforma() << endl;
         cout << "Por favor, registre su correo electronico y su año de nacimiento (SOLO EL AÑO)" << endl;
         cout << "Correo Electronico: "; getline(cin, correo);
-        cout << "Año de Nacimiento: "; cin >> año;
-        cliente.registroCliente(correo, año);
+        cout << "Año de Nacimiento: "; cin >> anio;
+        cliente.registroCliente(correo, anio);
         cout << "\t" << endl;
         cliente.imprimirDatosCliente();
         cout << "\t" << endl;
@@ -44,18 +44,18 @@ Cliente registro(){
 }
 
 Cliente tarjeta(Cliente cliente){
-    int num, cvv, añoV;
+    int num, cvv, anioV;
     string titular;
     cout << "\t" << endl;
     cout << "Para comprar en este sitio, requerimos de los datos de su tarjeta de credito..." << endl;
     cout << "Ingrese el numero de su tarjeta: "; cin >> num;
     cout << "Ingrese el cvv de su tarjeta: "; cin >> cvv;
     titular = cliente.getNombre();
-    cout << "Ingrese el año de vencimiento de su tarjeta: "; cin >> añoV;
+    cout << "Ingrese el año de vencimiento de su tarjeta: "; cin >> anioV;
     cout << "\t" << endl;
     cout << "Espere mientras procesamos sus datos..." << endl;
     cout << "\t" << endl;
-    cliente.ingresarDatosTarjeta(num,cvv,titular,añoV);
+    cliente.ingresarDatosTarjeta(num,cvv,titular,anioV);
     cout << "\t" << endl;
     return cliente;
 }

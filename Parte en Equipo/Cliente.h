@@ -14,7 +14,7 @@ class Cliente{
     string nombreCliente;
     string correoCliente;
     string direccionCliente;
-    int añoNacimientoCliente;
+    int anioNacimientoCliente;
     Local local;
     Internacional internacional;
     Tarjeta tarjeta;
@@ -25,7 +25,7 @@ class Cliente{
             nombreCliente = " ";
             correoCliente = " ";
             direccionCliente = " ";
-            añoNacimientoCliente = 1900;
+            anioNacimientoCliente = 1900;
             local = Local{};
             internacional = Internacional{};
             tarjeta = Tarjeta{};
@@ -37,9 +37,9 @@ class Cliente{
         string ingresarPlataforma(){
             return "Bienvenido a la Plataforma " + nombreCliente + "!";
         }
-        void registroCliente(string correo, int año){
+        void registroCliente(string correo, int anio){
             correoCliente = correo;
-            añoNacimientoCliente = año;
+            anioNacimientoCliente = anio;
         }
         string getNombre(){return nombreCliente;}
         string getCorreo(){return correoCliente;}
@@ -49,17 +49,17 @@ class Cliente{
             cout << "Nombre del Cliente: " << nombreCliente << endl;
             cout << "Correo electronico: " << correoCliente << endl;
             cout << "Direccion del Cliente: " << direccionCliente << endl;
-            cout << "Año de Nacimiento del Cliente: " << añoNacimientoCliente << endl;
+            cout << "Año de Nacimiento del Cliente: " << anioNacimientoCliente << endl;
         }
         bool verificarEdad(){
-            if(añoNacimientoCliente < 2002){
+            if(anioNacimientoCliente < 2002){
                 return true;
             } else {
                 return false;
             }
         }
-        void ingresarDatosTarjeta(int num, int cvv, string titular, int año){
-            tarjeta = Tarjeta(num, cvv, titular, año);
+        void ingresarDatosTarjeta(int num, int cvv, string titular, int anio){
+            tarjeta = Tarjeta(num, cvv, titular, anio);
             tarjeta.saldoTarjeta();
             tarjeta.confirmacionDatos();
         }

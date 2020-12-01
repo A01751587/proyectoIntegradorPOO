@@ -12,7 +12,7 @@ class Tarjeta{
     int cvvTarjeta;
     string titularTarjeta;
     int saldoTar;
-    int añoVencimientoTarjeta;
+    int anioVencimientoTarjeta;
 
     public:
         Tarjeta(){
@@ -20,9 +20,9 @@ class Tarjeta{
             cvvTarjeta = 000;
             titularTarjeta = " ";
             saldoTar = 0;
-            añoVencimientoTarjeta = 1900;
+            anioVencimientoTarjeta = 1900;
         }
-        Tarjeta(int num, int cvv, string titular, int año) : numeroTarjeta{num}, cvvTarjeta{cvv}, titularTarjeta{titular}, añoVencimientoTarjeta{año}
+        Tarjeta(int num, int cvv, string titular, int anio) : numeroTarjeta{num}, cvvTarjeta{cvv}, titularTarjeta{titular}, anioVencimientoTarjeta{anio}
         {
             // no se inicializa
         }
@@ -40,11 +40,11 @@ class Tarjeta{
             cout << "Tarjeta de crédito de: " << titularTarjeta << endl;
             cout << "Numero de Tarjeta: " << to_string(numeroTarjeta) << endl;
             cout << "CVV: " << to_string(cvvTarjeta) << endl;
-            cout << "Año de Vencimiento: " << to_string(añoVencimientoTarjeta) << endl;
+            cout << "Año de Vencimiento: " << to_string(anioVencimientoTarjeta) << endl;
             cout << "Saldo de la Tarjeta: " << to_string(saldoTar) << endl;
         }
 
-        int getAño(){return añoVencimientoTarjeta;}
+        int getAño(){return anioVencimientoTarjeta;}
         
         string eliminarTarjeta(){
             return "La Tarjeta ha sido eliminada del sistema por su seguridad";
